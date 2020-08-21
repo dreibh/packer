@@ -1,0 +1,19 @@
+packer for Debian
+-----------------
+
+Following features have been disabled in Debian version, due to lack
+of time to package the dependencies.
+
+* Builder
+  + hyperone
+  + linode
+  + scaleway
+  + ucloud
+  + yandex
+
+Following behaviours are different from upstream version.
+
+* telemetry is enabled only when CHECKPOINT_DISABLE
+  environment is set 0.
+
+ -- Shengjing Zhu <zhsj@debian.org> Mon, 13 Jul 2020 00:00:00 +0800

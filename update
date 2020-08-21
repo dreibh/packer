@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+git checkout tools/make-version.pl
+git checkout debian/
+
+git pull
+./renew-debian-changelog
+
+# The symbols are currently out of date!
+rm -f debian/*.symbols

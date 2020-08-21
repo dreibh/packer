@@ -1,0 +1,41 @@
+#!/bin/bash
+
+. ./packaging.conf
+
+# ------ Revert debian/changelog and debian/control -------------------------
+git checkout debian/changelog debian/control
+
+find debian/ -name '*.symbols' | xargs -n1 -i§ truncate --size 0 §
+
+
+# ------ Current GIT version ------------------------------------------------
+UPSTREAM_VERSION=`grep -E "^const Version =" version/version.go | sed -e "s/.*const Version = \"//g" -e "s/\".*$//g"`
+UPSTREAM_VERSIONEXT=`grep -E "^const VersionPrerelease =" version/version.go | sed -e "s/.*const VersionPrerelease = \"//g" -e "s/\".*$//g"`
+if [ "${UPSTREAM_VERSIONEXT}" != "" ] ; then
+   UPSTREAM_VERSION="${UPSTREAM_VERSION}-${UPSTREAM_VERSIONEXT}"
+fi
+
+GIT_VERSION="git`env LANG=en date -u +"%Y%m%d%H%M%S"`"
+GIT_ID="$GIT_VERSION~`cat .git/ORIG_HEAD | cut -b 1-8`"   # Name may not be too long! Just take 8 digits ...
+
+
+# ------ Create debian/changelog --------------------------------------------
+(
+   echo "packer (${UPSTREAM_VERSION}+${GIT_ID}-1ppa1) unstable; urgency=medium"
+   echo ""
+   echo "  * Self-made package"
+   echo ""
+   echo " -- $MAINTAINER  `env LANG=en date +"%a, %02d %b %Y %H:%M:%S %z"`"
+) | tee debian/changelog.new
+
+# ------ Change debian/control ----------------------------------------------
+# NOTE: wrap-and-sort does not like comments:
+# => remove "# " all lines!
+grep -v "^# " debian/control |
+sed -e "s/^Maintainer: .*$/Maintainer: $MAINTAINER/g" \
+    -e "s/debhelper-compat (= .*)/debhelper/g" \
+    >debian/control.new
+
+# ------ Apply changes ------------------------------------------------------
+mv debian/changelog.new debian/changelog
+mv debian/control.new debian/control

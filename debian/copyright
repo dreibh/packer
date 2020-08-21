@@ -1,0 +1,403 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: packer
+Source: https://github.com/hashicorp/packer
+Files-Excluded: website
+ vendor/cloud.google.com/go
+ ~~vendor/github.com/1and1/oneandone-cloudserver-sdk-go
+ vendor/github.com/agext/levenshtein
+ ~~vendor/github.com/aliyun/alibaba-cloud-sdk-go
+ vendor/github.com/aliyun/aliyun-oss-go-sdk
+ vendor/github.com/andybalholm/cascadia
+ vendor/github.com/antchfx/htmlquery
+ vendor/github.com/antchfx/xmlquery
+ vendor/github.com/antchfx/xpath
+ vendor/github.com/antchfx/xquery
+ vendor/github.com/antihax/optional #github.com/hyperonecom/h1-client-go
+ vendor/github.com/apparentlymart/go-cidr
+ vendor/github.com/apparentlymart/go-textseg
+ vendor/github.com/approvals/go-approval-tests
+ vendor/github.com/armon/go-metrics
+ vendor/github.com/armon/go-radix
+ vendor/github.com/aws/aws-sdk-go
+ vendor/github.com/Azure/azure-sdk-for-go
+ vendor/github.com/Azure/go-autorest
+ vendor/github.com/Azure/go-ntlmssp
+ vendor/github.com/bgentry/go-netrc
+ vendor/github.com/bgentry/speakeasy
+ vendor/github.com/biogo/hts
+ vendor/github.com/bmatcuk/doublestar
+ vendor/github.com/BurntSushi/toml
+ vendor/github.com/c2h5oh/datasize #yandex/builder
+ vendor/github.com/cheggaaa/pb
+ vendor/github.com/ChrisTrenkamp/goxpath
+ vendor/github.com/chzyer/readline
+ vendor/github.com/creack/goselect #github.com/moul/gotty-client #github.com/scaleway/scaleway-cli
+ vendor/github.com/davecgh/go-spew
+ vendor/github.com/dgrijalva/jwt-go
+ vendor/github.com/digitalocean/godo
+ vendor/github.com/digitalocean/go-libvirt
+ vendor/github.com/digitalocean/go-qemu
+ vendor/github.com/dimchansky/utfbom
+ vendor/github.com/docker/docker #github.com/scaleway/scaleway-cli
+ vendor/github.com/dustin/go-humanize
+ vendor/github.com/dylanmei/iso8601
+ vendor/github.com/dylanmei/winrmtest
+ ~~vendor/github.com/exoscale/egoscale
+ vendor/github.com/fatih/camelcase
+ vendor/github.com/fatih/color
+ vendor/github.com/fatih/structtag
+ vendor/github.com/ghodss/yaml
+ vendor/github.com/gobwas/glob
+ vendor/github.com/gocolly/colly
+ vendor/github.com/gofrs/flock
+ vendor/github.com/gofrs/uuid
+ vendor/github.com/go-ini/ini
+ vendor/github.com/golang-collections/collections
+ vendor/github.com/golang/groupcache
+ vendor/github.com/golang/protobuf
+ vendor/github.com/golang/snappy
+ vendor/github.com/googleapis/gax-go
+ vendor/github.com/google/go-cmp
+ vendor/github.com/google/go-querystring
+ vendor/github.com/google/shlex
+ vendor/github.com/google/uuid
+ vendor/github.com/go-ole/go-ole
+ vendor/github.com/gophercloud/gophercloud
+ vendor/github.com/gophercloud/utils
+ vendor/github.com/gorilla/websocket
+ vendor/github.com/grpc-ecosystem/go-grpc-middleware #yandex/builder
+ ~~vendor/github.com/hashicorp/consul
+ vendor/github.com/hashicorp/errwrap
+ vendor/github.com/hashicorp/go-checkpoint
+ vendor/github.com/hashicorp/go-cleanhttp
+ ~~vendor/github.com/hashicorp/go-cty-funcs
+ ~~vendor/github.com/hashicorp/go-getter #v2
+ vendor/github.com/hashicorp/go-hclog
+ vendor/github.com/hashicorp/go-immutable-radix
+ vendor/github.com/hashicorp/golang-lru
+ vendor/github.com/hashicorp/go-multierror
+ ~~vendor/github.com/hashicorp/go-oracle-terraform
+ vendor/github.com/hashicorp/go-retryablehttp
+ vendor/github.com/hashicorp/go-rootcerts
+ vendor/github.com/hashicorp/go-safetemp
+ vendor/github.com/hashicorp/go-sockaddr
+ vendor/github.com/hashicorp/go-uuid
+ vendor/github.com/hashicorp/go-version
+ ~~vendor/github.com/hashicorp/hcl #v2
+ vendor/github.com/hashicorp/serf
+ ~~vendor/github.com/hashicorp/vault
+ vendor/github.com/hashicorp/yamux
+ vendor/github.com/hetznercloud/hcloud-go
+ vendor/github.com/hyperonecom/h1-client-go
+ ~~vendor/github.com/jdcloud-api/jdcloud-sdk-go
+ ~~vendor/github.com/jehiah/go-strftime
+ vendor/github.com/jmespath/go-jmespath
+ ~~vendor/github.com/joyent/triton-go
+ vendor/github.com/json-iterator/go
+ vendor/github.com/jstemmer/go-junit-report
+ vendor/github.com/kardianos/osext
+ vendor/github.com/kennygrant/sanitize
+ vendor/github.com/klauspost/compress
+ vendor/github.com/klauspost/cpuid
+ vendor/github.com/klauspost/crc32
+ vendor/github.com/klauspost/pgzip
+ vendor/github.com/konsorten/go-windows-terminal-sequences
+ vendor/github.com/kr/fs
+ vendor/github.com/linode/linodego
+ vendor/github.com/masterzen/azure-sdk-for-go
+ vendor/github.com/masterzen/simplexml
+ vendor/github.com/masterzen/winrm
+ vendor/github.com/mattn/go-colorable
+ vendor/github.com/mattn/go-isatty
+ vendor/github.com/mattn/go-runewidth
+ vendor/github.com/mattn/go-tty
+ vendor/github.com/mitchellh/cli
+ vendor/github.com/mitchellh/go-fs
+ vendor/github.com/mitchellh/go-homedir
+ vendor/github.com/mitchellh/go-testing-interface
+ vendor/github.com/mitchellh/go-vnc
+ vendor/github.com/mitchellh/go-wordwrap
+ vendor/github.com/mitchellh/iochan
+ vendor/github.com/mitchellh/mapstructure
+ vendor/github.com/mitchellh/panicwrap
+ vendor/github.com/mitchellh/prefixedio
+ vendor/github.com/mitchellh/reflectwalk
+ vendor/github.com/modern-go/concurrent
+ vendor/github.com/modern-go/reflect2
+ vendor/github.com/moul/anonuuid #github.com/scaleway/scaleway-cli
+ vendor/github.com/moul/gotty-client #github.com/scaleway/scaleway-cli
+ ~~vendor/github.com/NaverCloudPlatform/ncloud-sdk-go-v2
+ vendor/github.com/nu7hatch/gouuid
+ vendor/github.com/olekukonko/tablewriter
+ ~~vendor/github.com/oracle/oci-go-sdk
+ ~~vendor/github.com/outscale/osc-go
+ vendor/github.com/packer-community/winrmcp
+ vendor/github.com/pierrec/lz4
+ vendor/github.com/pkg/errors
+ vendor/github.com/pkg/sftp
+ vendor/github.com/pmezard/go-difflib
+ vendor/github.com/posener/complete
+ ~~vendor/github.com/profitbricks/profitbricks-sdk-go
+ vendor/github.com/PuerkitoBio/goquery
+ vendor/github.com/renstrom/fuzzysearch #github.com/scaleway/scaleway-cli
+ vendor/github.com/ryanuber/go-glob
+ vendor/github.com/saintfish/chardet
+ vendor/github.com/satori/go.uuid
+ vendor/github.com/scaleway/scaleway-cli
+ vendor/github.com/shirou/gopsutil
+ vendor/github.com/shirou/w32
+ vendor/github.com/sirupsen/logrus
+ vendor/github.com/StackExchange/wmi
+ vendor/github.com/stretchr/testify
+ ~~vendor/github.com/Telmate/proxmox-api-go
+ vendor/github.com/temoto/robotstxt
+ ~~vendor/github.com/tencentcloud/tencentcloud-sdk-go
+ vendor/github.com/ucloud/ucloud-sdk-go
+ vendor/github.com/ufilesdk-dev/ufile-gosdk
+ vendor/github.com/ugorji/go
+ vendor/github.com/ulikunitz/xz
+ vendor/github.com/vmware/govmomi
+ vendor/github.com/xanzy/go-cloudstack
+ vendor/github.com/yandex-cloud/go-genproto
+ vendor/github.com/yandex-cloud/go-sdk
+ vendor/github.com/zclconf/go-cty
+ ~~vendor/github.com/zclconf/go-cty-yaml
+ vendor/golang.org/x/crypto
+ vendor/golang.org/x/exp
+ vendor/golang.org/x/lint
+ ~~vendor/golang.org/x/mobile
+ vendor/golang.org/x/mod
+ vendor/golang.org/x/net
+ vendor/golang.org/x/oauth2
+ vendor/golang.org/x/sync
+ vendor/golang.org/x/sys
+ vendor/golang.org/x/text
+ vendor/golang.org/x/time
+ vendor/golang.org/x/tools
+ vendor/golang.org/x/xerrors
+ vendor/google.golang.org/api
+ vendor/google.golang.org/appengine
+ vendor/google.golang.org/genproto
+ vendor/google.golang.org/grpc
+ vendor/go.opencensus.io
+ vendor/gopkg.in/ini.v1
+ vendor/gopkg.in/resty.v1 #github.com/linode/linodego
+ vendor/gopkg.in/square
+ vendor/gopkg.in/yaml.v2
+ vendor/honnef.co/go/tools
+
+Files: *
+Copyright: 2014-2016 Mitchell Hashimoto <mitchell.hashimoto@gmail.com>
+           HashiCorp, Inc
+License: MPL-2.0
+
+Files: debian/*
+Copyright: 2016 Daniel Stender <stender@debian.org>
+           2017 Shengjing Zhu <zhsj@debian.org>
+License: MPL-2.0
+
+Files: post-processor/compress/*
+Copyright: 2014 Vasiliy Tolstov <v.tolstov@selfip.ru>
+License: Expat
+
+Files: post-processor/checksum/*
+Copyright: 2016 Vasiliy Tolstov <v.tolstov@selfip.ru>
+License: Expat
+
+Files: builder/azure/*
+Copyright: Microsoft Corporation
+License: Expat
+
+Files: builder/azure/pkcs12/*
+Copyright: 2009-2016 The Go Authors
+License: BSD-3-Clause
+
+Files: builder/oracle/oci/*
+Copyright: 2017 Oracle and/or its affiliates
+License: MPL-2.0
+
+Files: helper/multistep/*
+Copyright: 2013 Mitchell Hashimoto
+License: Expat
+
+Files: vendor/github.com/1and1/oneandone-cloudserver-sdk-go/*
+Copyright: 2016 1&1 Internet SE
+License: Apache-2.0
+
+Files: vendor/github.com/aliyun/alibaba-cloud-sdk-go/*
+Copyright: Alibaba Cloud
+License: Apache-2.0
+
+Files: vendor/github.com/exoscale/egoscale/*
+Copyright: 2014 exoscale(tm)
+License: Apache-2.0
+
+Files: vendor/github.com/hashicorp/consul/*
+Copyright: 2014-2018 HashiCorp, Inc
+License: MPL-2.0
+
+Files: vendor/github.com/hashicorp/go-cty-funcs/*
+Copyright: HashiCorp, Inc
+License: MPL-2.0
+
+Files: vendor/github.com/hashicorp/go-getter/*
+Copyright: HashiCorp, Inc
+License: MPL-2.0
+
+Files: vendor/github.com/hashicorp/go-oracle-terraform/*
+Copyright: HashiCorp, Inc
+License: MPL-2.0
+
+Files: vendor/github.com/hashicorp/hcl/*
+Copyright: HashiCorp, Inc
+License: MPL-2.0
+
+Files: vendor/github.com/hashicorp/vault/*
+Copyright: HashiCorp, Inc
+License: MPL-2.0
+
+Files: vendor/github.com/jdcloud-api/jdcloud-sdk-go/*
+Copyright: 2018 JDCLOUD.COM
+License: Apache-2.0
+
+Files: vendor/github.com/jehiah/go-strftime/*
+Copyright: 2012 Jehiah Czebotar
+License: Expat
+
+Files: vendor/github.com/joyent/triton-go/*
+Copyright: 2018 Joyent, Inc.
+License: MPL-2.0
+
+Files: vendor/github.com/NaverCloudPlatform/ncloud-sdk-go-v2/*
+Copyright: 2018 NAVER BUSINESS PLATFORM Corp
+License: Expat
+
+Files: vendor/github.com/oracle/oci-go-sdk/*
+Copyright: 2016-2020 Oracle and/or its affiliates.
+License: UPL-1.0 or Apache-2.0
+
+Files: vendor/github.com/outscale/osc-go/*
+Copyright: 2019 Outscale SAS <support@outscale.com>
+License: BSD-3-Clause
+
+Files: vendor/github.com/profitbricks/profitbricks-sdk-go/*
+Copyright: 2015 ProfitBricks GmbH
+License: Apache-2.0
+
+Files: vendor/github.com/Telmate/proxmox-api-go/*
+Copyright: Telmate LLC
+License: Expat
+
+Files: vendor/github.com/tencentcloud/tencentcloud-sdk-go/*
+Copyright: 2017-2018 THL A29 Limited, a Tencent company
+License: Apache-2.0
+
+Files: vendor/github.com/zclconf/go-cty-yaml/*
+Copyright: 2006 Kirill Simonov
+           2011-2016 Canonical Ltd
+           2019 Martin Atkins
+License: Apache-2.0
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+    * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following disclaimer
+ in the documentation and/or other materials provided with the
+ distribution.
+    * Neither the name of Google Inc. nor the names of its
+ contributors may be used to endorse or promote products derived from
+ this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: MPL-2.0
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this
+ file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ .
+ On Debian systems a full copy of the MPL-2.0 can be found at
+ /usr/share/common-licenses/MPL-2.0
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the complete text of the Apache version 2.0 license
+ can be found in "/usr/share/common-licenses/Apache-2.0".
+
+License: UPL-1.0
+ The Universal Permissive License (UPL), Version 1.0
+ .
+ Subject to the condition set forth below, permission is hereby granted to any
+ person obtaining a copy of this software, associated documentation and/or data
+ (collectively the "Software"), free of charge and under any and all copyright
+ rights in the Software, and any and all patent rights owned or freely
+ licensable by each licensor hereunder covering either (i) the unmodified
+ Software as contributed to or provided by such licensor, or (ii) the Larger
+ Works (as defined below), to deal in both
+ .
+ (a) the Software, and
+ (b) any piece of software and/or hardware listed in the lrgrwrks.txt file if
+ one is included with the Software (each a "Larger Work" to which the Software
+ is contributed by such licensors),
+ .
+ without restriction, including without limitation the rights to copy, create
+ derivative works of, display, perform, and distribute the Software and make,
+ use, sell, offer for sale, import, export, have made, and have sold the
+ Software and the Larger Work(s), and to sublicense the foregoing rights on
+ either these or other terms.
+ .
+ This license is subject to the following condition:
+ The above copyright notice and either this complete permission notice or at
+ a minimum a reference to the UPL must be included in all copies or
+ substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.

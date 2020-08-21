@@ -1,0 +1,6 @@
+0001-only-enable-telemetry-when-CHECKPOINT_DISABLE-is-0.patch
+0002-fix-ugorji-go-compatibility.patch
+# 0003-disable-hyperone-linode-scaleway-uloud-yandex.patch
+# 0004-update-gophercloud-to-0.12.0.patch
+# 0005-fix-vagrant-cloud-test.patch
+0006-disable-test-failed-with-reflectwalk-v1.0.1.patch

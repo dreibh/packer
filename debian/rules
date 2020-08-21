@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+export DH_GOLANG_INSTALL_EXTRA := $(shell find . -name test-fixtures) \
+                                  $(shell find . -name *.approved.*)
+export DH_GOLANG_EXCLUDES := \
+	cmd plugin/example builder/vsphere/examples/driver scripts \
+	builder/scaleway builder/hyperone builder/linode \
+	builder/ucloud post-processor/ucloud-import \
+	builder/yandex post-processor/yandex-export
+
+ifeq (,$(findstring gccgo, $(shell go version)))
+# armel/armhf fail to link:
+# os/user(.text): direct call too far: .plt 87db4e
+export GOFLAGS := -ldflags=-linkmode=external
+endif
+
+PKG = _build/src/github.com/hashicorp/packer
+
+%:
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+execute_after_dh_auto_configure:
+ifneq (,$(filter $(DEB_HOST_ARCH), mipsel))
+	# mipsel is too slow to run these tests
+	rm -vf $(PKG)/builder/googlecompute/step_create_windows_password_test.go
+	rm -vf $(PKG)/builder/azure/arm/template_factory_test.go
+endif
+	# fail on ipv6-only buildd
+	rm -vf $(PKG)/builder/proxmox/step_type_boot_command_test.go
+	# no tty in schroot
+	rm -vf $(PKG)/common/terminal_test.go
+
+override_dh_auto_install:
+	dh_auto_install -- --no-source
+	cp -vf vendor/github.com/zclconf/go-cty-yaml/NOTICE debian/go-cty-yaml.NOTICE

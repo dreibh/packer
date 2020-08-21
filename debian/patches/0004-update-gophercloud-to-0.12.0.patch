@@ -1,0 +1,29 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Mon, 13 Jul 2020 11:00:26 +0800
+Subject: update gophercloud to 0.12.0
+
+---
+ builder/openstack/step_load_flavor.go | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/builder/openstack/step_load_flavor.go b/builder/openstack/step_load_flavor.go
+index 5d92202..570b5ad 100644
+--- a/builder/openstack/step_load_flavor.go
++++ b/builder/openstack/step_load_flavor.go
+@@ -6,6 +6,7 @@ import (
+ 	"log"
+ 
+ 	"github.com/gophercloud/gophercloud/openstack/compute/v2/flavors"
++	flavorutils "github.com/gophercloud/utils/openstack/compute/v2/flavors"
+ 	"github.com/hashicorp/packer/helper/multistep"
+ 	"github.com/hashicorp/packer/packer"
+ )
+@@ -37,7 +38,7 @@ func (s *StepLoadFlavor) Run(ctx context.Context, state multistep.StateBag) mult
+ 		geterr := err
+ 
+ 		log.Printf("[INFO] Loading flavor by name: %s", s.Flavor)
+-		id, err := flavors.IDFromName(client, s.Flavor)
++		id, err := flavorutils.IDFromName(client, s.Flavor)
+ 		if err != nil {
+ 			log.Printf("[ERROR] Failed to find flavor by name: %s", err)
+ 			err = fmt.Errorf(

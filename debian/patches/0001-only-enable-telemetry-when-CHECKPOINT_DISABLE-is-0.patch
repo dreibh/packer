@@ -1,0 +1,21 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Mon, 13 Jul 2020 00:53:42 +0800
+Subject: only enable telemetry when CHECKPOINT_DISABLE is 0
+
+---
+ packer/telemetry.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/packer/telemetry.go b/packer/telemetry.go
+index 0f493a8..1302cf7 100644
+--- a/packer/telemetry.go
++++ b/packer/telemetry.go
+@@ -31,7 +31,7 @@ type CheckpointTelemetry struct {
+ }
+ 
+ func NewCheckpointReporter(disableSignature bool) *CheckpointTelemetry {
+-	if disabled := os.Getenv("CHECKPOINT_DISABLE"); disabled != "" {
++	if disabled := os.Getenv("CHECKPOINT_DISABLE"); disabled != "0" {
+ 		return nil
+ 	}
+ 

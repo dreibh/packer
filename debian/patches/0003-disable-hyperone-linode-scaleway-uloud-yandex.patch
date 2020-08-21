@@ -1,0 +1,101 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Sun, 12 Jul 2020 23:17:23 +0800
+Subject: disable hyperone linode scaleway uloud yandex
+
+Too much unpackaged dependencies
+---
+ command/plugin.go | 14 --------------
+ 1 file changed, 14 deletions(-)
+
+diff --git a/command/plugin.go b/command/plugin.go
+index 96d28ae..6a19a35 100644
+--- a/command/plugin.go
++++ b/command/plugin.go
+@@ -28,11 +28,9 @@ import (
+ 	filebuilder "github.com/hashicorp/packer/builder/file"
+ 	googlecomputebuilder "github.com/hashicorp/packer/builder/googlecompute"
+ 	hcloudbuilder "github.com/hashicorp/packer/builder/hcloud"
+-	hyperonebuilder "github.com/hashicorp/packer/builder/hyperone"
+ 	hypervisobuilder "github.com/hashicorp/packer/builder/hyperv/iso"
+ 	hypervvmcxbuilder "github.com/hashicorp/packer/builder/hyperv/vmcx"
+ 	jdcloudbuilder "github.com/hashicorp/packer/builder/jdcloud"
+-	linodebuilder "github.com/hashicorp/packer/builder/linode"
+ 	lxcbuilder "github.com/hashicorp/packer/builder/lxc"
+ 	lxdbuilder "github.com/hashicorp/packer/builder/lxd"
+ 	ncloudbuilder "github.com/hashicorp/packer/builder/ncloud"
+@@ -50,10 +48,8 @@ import (
+ 	profitbricksbuilder "github.com/hashicorp/packer/builder/profitbricks"
+ 	proxmoxbuilder "github.com/hashicorp/packer/builder/proxmox"
+ 	qemubuilder "github.com/hashicorp/packer/builder/qemu"
+-	scalewaybuilder "github.com/hashicorp/packer/builder/scaleway"
+ 	tencentcloudcvmbuilder "github.com/hashicorp/packer/builder/tencentcloud/cvm"
+ 	tritonbuilder "github.com/hashicorp/packer/builder/triton"
+-	uclouduhostbuilder "github.com/hashicorp/packer/builder/ucloud/uhost"
+ 	vagrantbuilder "github.com/hashicorp/packer/builder/vagrant"
+ 	virtualboxisobuilder "github.com/hashicorp/packer/builder/virtualbox/iso"
+ 	virtualboxovfbuilder "github.com/hashicorp/packer/builder/virtualbox/ovf"
+@@ -62,7 +58,6 @@ import (
+ 	vmwarevmxbuilder "github.com/hashicorp/packer/builder/vmware/vmx"
+ 	vsphereclonebuilder "github.com/hashicorp/packer/builder/vsphere/clone"
+ 	vsphereisobuilder "github.com/hashicorp/packer/builder/vsphere/iso"
+-	yandexbuilder "github.com/hashicorp/packer/builder/yandex"
+ 	alicloudimportpostprocessor "github.com/hashicorp/packer/post-processor/alicloud-import"
+ 	amazonimportpostprocessor "github.com/hashicorp/packer/post-processor/amazon-import"
+ 	artificepostprocessor "github.com/hashicorp/packer/post-processor/artifice"
+@@ -78,12 +73,10 @@ import (
+ 	googlecomputeimportpostprocessor "github.com/hashicorp/packer/post-processor/googlecompute-import"
+ 	manifestpostprocessor "github.com/hashicorp/packer/post-processor/manifest"
+ 	shelllocalpostprocessor "github.com/hashicorp/packer/post-processor/shell-local"
+-	ucloudimportpostprocessor "github.com/hashicorp/packer/post-processor/ucloud-import"
+ 	vagrantpostprocessor "github.com/hashicorp/packer/post-processor/vagrant"
+ 	vagrantcloudpostprocessor "github.com/hashicorp/packer/post-processor/vagrant-cloud"
+ 	vspherepostprocessor "github.com/hashicorp/packer/post-processor/vsphere"
+ 	vspheretemplatepostprocessor "github.com/hashicorp/packer/post-processor/vsphere-template"
+-	yandexexportpostprocessor "github.com/hashicorp/packer/post-processor/yandex-export"
+ 	ansibleprovisioner "github.com/hashicorp/packer/provisioner/ansible"
+ 	ansiblelocalprovisioner "github.com/hashicorp/packer/provisioner/ansible-local"
+ 	azuredtlartifactprovisioner "github.com/hashicorp/packer/provisioner/azure-dtlartifact"
+@@ -124,11 +117,9 @@ var Builders = map[string]packer.Builder{
+ 	"file":                new(filebuilder.Builder),
+ 	"googlecompute":       new(googlecomputebuilder.Builder),
+ 	"hcloud":              new(hcloudbuilder.Builder),
+-	"hyperone":            new(hyperonebuilder.Builder),
+ 	"hyperv-iso":          new(hypervisobuilder.Builder),
+ 	"hyperv-vmcx":         new(hypervvmcxbuilder.Builder),
+ 	"jdcloud":             new(jdcloudbuilder.Builder),
+-	"linode":              new(linodebuilder.Builder),
+ 	"lxc":                 new(lxcbuilder.Builder),
+ 	"lxd":                 new(lxdbuilder.Builder),
+ 	"ncloud":              new(ncloudbuilder.Builder),
+@@ -146,10 +137,8 @@ var Builders = map[string]packer.Builder{
+ 	"profitbricks":        new(profitbricksbuilder.Builder),
+ 	"proxmox":             new(proxmoxbuilder.Builder),
+ 	"qemu":                new(qemubuilder.Builder),
+-	"scaleway":            new(scalewaybuilder.Builder),
+ 	"tencentcloud-cvm":    new(tencentcloudcvmbuilder.Builder),
+ 	"triton":              new(tritonbuilder.Builder),
+-	"ucloud-uhost":        new(uclouduhostbuilder.Builder),
+ 	"vagrant":             new(vagrantbuilder.Builder),
+ 	"virtualbox-iso":      new(virtualboxisobuilder.Builder),
+ 	"virtualbox-ovf":      new(virtualboxovfbuilder.Builder),
+@@ -158,7 +147,6 @@ var Builders = map[string]packer.Builder{
+ 	"vmware-vmx":          new(vmwarevmxbuilder.Builder),
+ 	"vsphere-clone":       new(vsphereclonebuilder.Builder),
+ 	"vsphere-iso":         new(vsphereisobuilder.Builder),
+-	"yandex":              new(yandexbuilder.Builder),
+ }
+ 
+ var Provisioners = map[string]packer.Provisioner{
+@@ -198,12 +186,10 @@ var PostProcessors = map[string]packer.PostProcessor{
+ 	"googlecompute-import": new(googlecomputeimportpostprocessor.PostProcessor),
+ 	"manifest":             new(manifestpostprocessor.PostProcessor),
+ 	"shell-local":          new(shelllocalpostprocessor.PostProcessor),
+-	"ucloud-import":        new(ucloudimportpostprocessor.PostProcessor),
+ 	"vagrant":              new(vagrantpostprocessor.PostProcessor),
+ 	"vagrant-cloud":        new(vagrantcloudpostprocessor.PostProcessor),
+ 	"vsphere":              new(vspherepostprocessor.PostProcessor),
+ 	"vsphere-template":     new(vspheretemplatepostprocessor.PostProcessor),
+-	"yandex-export":        new(yandexexportpostprocessor.PostProcessor),
+ }
+ 
+ var pluginRegexp = regexp.MustCompile("packer-(builder|post-processor|provisioner)-(.+)")

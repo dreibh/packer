@@ -1,0 +1,33 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Sun, 21 Jun 2020 21:19:16 +0800
+Subject: fix ugorji/go compatibility
+
+---
+ packer/rpc/client.go | 1 -
+ packer/rpc/server.go | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/packer/rpc/client.go b/packer/rpc/client.go
+index e8eadfb..a7614a7 100644
+--- a/packer/rpc/client.go
++++ b/packer/rpc/client.go
+@@ -42,7 +42,6 @@ func newClientWithMux(mux *muxBroker, streamId uint32) (*Client, error) {
+ 	}
+ 
+ 	h := &codec.MsgpackHandle{
+-		RawToString: true,
+ 		WriteExt:    true,
+ 	}
+ 	clientCodec := codec.GoRpc.ClientCodec(clientConn, h)
+diff --git a/packer/rpc/server.go b/packer/rpc/server.go
+index b583e29..6c08573 100644
+--- a/packer/rpc/server.go
++++ b/packer/rpc/server.go
+@@ -140,7 +140,6 @@ func (s *Server) Serve() {
+ 	defer stream.Close()
+ 
+ 	h := &codec.MsgpackHandle{
+-		RawToString: true,
+ 		WriteExt:    true,
+ 	}
+ 	rpcCodec := codec.GoRpc.ServerCodec(stream, h)

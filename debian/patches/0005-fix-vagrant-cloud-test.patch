@@ -1,0 +1,20 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Mon, 13 Jul 2020 16:22:47 +0800
+Subject: fix vagrant cloud test
+
+---
+ post-processor/vagrant-cloud/post-processor_test.go | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/post-processor/vagrant-cloud/post-processor_test.go b/post-processor/vagrant-cloud/post-processor_test.go
+index 4e2e83d..d7caaf8 100644
+--- a/post-processor/vagrant-cloud/post-processor_test.go
++++ b/post-processor/vagrant-cloud/post-processor_test.go
+@@ -173,6 +173,7 @@ func TestPostProcessor_Configure_checkAccessTokenIsRequiredByDefault(t *testing.
+ 	defer server.Close()
+ 
+ 	config := testNoAccessTokenProvidedConfig()
++	config["vagrant_cloud_url"] = server.URL
+ 	if err := p.Configure(config); err == nil {
+ 		t.Fatalf("Expected access token to be required.")
+ 	}
