@@ -33,6 +33,7 @@ GIT_ID="$GIT_VERSION~`cat .git/ORIG_HEAD | cut -b 1-8`"   # Name may not be too 
 # => remove "# " all lines!
 grep -v "^# " debian/control |
 sed -e "s/^Maintainer: .*$/Maintainer: $MAINTAINER/g" \
+    -e "s/debhelper (>= .)/debhelper/g" \
     -e "s/debhelper-compat (= .*)/debhelper/g" \
     >debian/control.new
 
